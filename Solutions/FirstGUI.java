@@ -9,13 +9,13 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.*;
 
 public class FirstGUI implements ActionListener {
     private int count = 0; //This counts the number of times the button is clicked
-    private JLabel label;
+    JLabel label;
 
-    public FirstGUI() {
+    public void makeGUI(){
+
         JFrame frame = new JFrame();
 
         JButton button = new JButton("Click me");
@@ -47,12 +47,14 @@ public class FirstGUI implements ActionListener {
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setTitle("My First GUI!");
-        //frame.pack(); //TODO find out what .pack does
+        //frame.pack(); //TODO find out what .pack does: bascially it justs sets the size
+        //of the frame so that all its contents are at or above their preferred sizes
         frame.setVisible(true);
     }
 
-    public static void main(String[] args) throws IOException {
-        new FirstGUI(); //TODO figure out why this works w/ just 'new' ... something to do w/ the cosntructor?
+    public static void main (String[] args) {
+        FirstGUI test1 = new FirstGUI();
+        test1.makeGUI();
     }
 
     @Override
