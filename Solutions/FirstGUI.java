@@ -14,7 +14,7 @@ public class FirstGUI implements ActionListener {
     private int count = 0; //This counts the number of times the button is clicked
     JLabel label;
 
-    public void makeGUI(){
+    public void makeGUI() {
 
         JFrame frame = new JFrame();
 
@@ -52,7 +52,7 @@ public class FirstGUI implements ActionListener {
         frame.setVisible(true);
     }
 
-    public static void main (String[] args) {
+    public static void main(String[] args) {
         FirstGUI test1 = new FirstGUI();
         test1.makeGUI();
     }
