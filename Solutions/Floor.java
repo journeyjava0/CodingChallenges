@@ -13,7 +13,7 @@ public class Floor {
         int whichFloor = 0; //keeps track of which floor we're on
         int position = 1; //keeps track of position of ( or ) each time we enter the basement
 
-        //create a list of all the positions that we enter the basement
+        //create a list to store all of the positions that we enter the basement
         List<Integer> positionsList = new ArrayList<>();
 
         //convert the string to an array of chars
@@ -39,7 +39,7 @@ public class Floor {
                 whichFloor--;
             }
 
-            //Determine which position user first enters the basement and store in a list
+            //Determine which position user first enters the basement and store in positionsList
             if (whichFloor != -1) {
                 position++;
             } else {
